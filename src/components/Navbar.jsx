@@ -29,7 +29,6 @@ const Navbar = () => {
           </p>
         </Link>
       </div>
-      Navbar
     </nav>
   );
 };
