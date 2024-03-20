@@ -12,6 +12,7 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20
   bg-primary`}
     >
+      {/* Navbar Dimensions */}
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
@@ -29,6 +30,7 @@ const Navbar = () => {
             </span>
           </p>
         </Link>
+        {/* Links : About, Work, Contact*/}
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
@@ -42,7 +44,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
+        {/* If it's a small device, use a dropdown box */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
