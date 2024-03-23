@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      {/* Interactive scroll down */}
+      {/* Full animated mouse wheel */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           {/* Scroll bar */}
@@ -44,6 +44,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
+              // Mouse wheel
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
           </div>

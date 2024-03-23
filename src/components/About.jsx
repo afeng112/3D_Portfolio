@@ -45,10 +45,10 @@ const About = () => {
         I'm an upcoming software developer with experience using TypeScript,
         JavaScript, expertise in utilizing frameworks such as React.js, Node.js
         and Three.js. I also have experience using Python and I'm currently
-        learning C# as well. Whilst I'm currently relatively new, I'm a quick
-        learner and can collaborate with clients and other team members to
-        develop efficient and user-friendly solutions, I more than happy to work
-        with others to bring ideas to life!
+        learning C# as well. Whilst I'm currently relatively inexperienced, I'm
+        a quick learner and can collaborate with clients and other team members
+        to develop efficient and user-friendly solutions, I more than happy to
+        work with others to bring ideas to life!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
