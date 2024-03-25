@@ -7,6 +7,7 @@ import { staggerContainer } from "../utils/motion";
 const SectionWrapper = (Component, idName) =>
   function HOC() {
     return (
+      // Staggered animations that display once the user scrolls down.
       <motion.section
         variants={staggerContainer()}
         initial="hidden"

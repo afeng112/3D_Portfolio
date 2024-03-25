@@ -34,21 +34,24 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
+      {/* Add motion.div to titles, fade in top to bottom*/}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
+
+      {/* Add motion.p to text, fade in */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm an upcoming software developer with experience using TypeScript,
-        JavaScript, expertise in utilizing frameworks such as React.js, Node.js
-        and Three.js. I also have experience using Python and I'm currently
-        learning C# as well. Whilst I'm currently relatively inexperienced, I'm
-        a quick learner and can collaborate with clients and other team members
-        to develop efficient and user-friendly solutions, I more than happy to
-        work with others to bring ideas to life!
+        I'm an upcoming software and web developer with experience using
+        TypeScript, JavaScript, expertise in utilizing frameworks such as
+        React.js, Node.js and Three.js. I also have experience using Python and
+        I'm currently learning C# as well. Whilst I'm currently relatively
+        inexperienced, I'm a quick learner and can collaborate with clients and
+        other team members to develop efficient and user-friendly solutions, I
+        more than happy to work with others to bring ideas to life!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
