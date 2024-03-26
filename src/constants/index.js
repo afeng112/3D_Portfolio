@@ -17,6 +17,8 @@ import {
   docker,
   meta,
   starbucks,
+  mounties,
+  next_one,
   tesla,
   shopify,
   carrent,
@@ -112,11 +114,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Customer Service Attendant",
+    company_name: "Mounties",
+    icon: mounties,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Dec 2015 - Current",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -125,9 +127,9 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Future Developer!",
+    company_name: "",
+    icon: next_one,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [

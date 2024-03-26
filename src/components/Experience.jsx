@@ -17,9 +17,8 @@ const ExperienceCard = ({ experience }) => (
     // Set styling of the cards
     contentStyle={{ background: "#1d1836", color: "#fff" }}
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
-    // Set styling of the date to the right of the icons.
     date={experience.date}
-    // Print out centered icon, change background for every 2nd workplace.
+    // Print out centered icons inside the capsules
     iconStyle={{ background: experience.iconBg }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
@@ -34,14 +33,32 @@ const ExperienceCard = ({ experience }) => (
     <div>
       {/* Prints out title for each workplace. */}
       <h3 className="text-white text-[24px] font-hold">{experience.title}</h3>
+      <p
+        className="text-secondary text-[16px] font-semibold"
+        style={{ margin: 0 }}
+      >
+        {experience.company_name}
+      </p>
     </div>
+
+    {/* Print out object, lists of duties from experiences. */}
+    <ul className="mt-5 list-disc ml-5 space-y-2">
+      {experience.points.map((point, index) => (
+        <li
+          key={`experience-point-${index}`}
+          className="text-white-100 text-[14px] pl-1 tracking-wider"
+        >
+          {point}
+        </li>
+      ))}
+    </ul>
   </VerticalTimelineElement>
 );
 
 const Experience = () => {
   return (
     <>
-      {/* Create experience section */}
+      {/* Create experience function */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My journey thus far...</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>

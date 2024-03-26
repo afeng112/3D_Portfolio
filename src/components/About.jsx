@@ -34,13 +34,11 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      {/* Add motion.div to titles, fade in top to bottom*/}
+      {/* Add fade in animations*/}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
-
-      {/* Add motion.p to text, fade in */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
@@ -54,6 +52,7 @@ const About = () => {
         more than happy to work with others to bring ideas to life!
       </motion.p>
 
+      {/* Print out my services inside the cards. */}
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
