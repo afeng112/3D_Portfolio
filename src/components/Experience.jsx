@@ -19,10 +19,10 @@ const ExperienceCard = ({ experience }) => (
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
     // Set styling of the date to the right of the icons.
     date={experience.date}
-    // Print out icon, change background for every 2nd workplace.
+    // Print out centered icon, change background for every 2nd workplace.
     iconStyle={{ background: experience.iconBg }}
     icon={
-      <div>
+      <div className="flex justify-center items-center w-full h-full">
         <img
           src={experience.icon}
           alt={experience.company_name}
