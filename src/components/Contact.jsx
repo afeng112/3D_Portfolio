@@ -30,27 +30,32 @@ const Contact = () => {
     // Function to handle form submission
     // This function will be called when user submits the form
 
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault(); // Prevent the default form submission behavior
 
+    setLoading(true); // Set loading state to true while sending the email
+
+    // Use emailjs to send the email
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
-          to_name: "Anthony",
-          from_email: form.email,
-          to_email: "afeng1122@gmail.com",
-          message: form.message,
+          // Data to be sent in the email
+          from_name: form.name, // Sender's name
+          to_name: "Anthony", // Receiver's name
+          from_email: form.email, // Sender's email
+          to_email: "afeng1122@gmail.com", // Receiver's email
+          message: form.message, // Message content
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          setLoading(false);
-          alert("Thank you, I will get back to you as soon as possible!");
+          // If email is sent successfully
+          setLoading(false); // Set loading state to false
+          alert("Thank you, I will get back to you as soon as possible!"); // Show success message
 
+          // Clear the form fields after successful submission
           setForm({
             name: "",
             email: "",
@@ -58,9 +63,10 @@ const Contact = () => {
           });
         },
         (error) => {
-          setLoading(false);
-          console.log(error);
-          alert("something went wrong!");
+          // If there is an error sending the email
+          setLoading(false); // Set loading state to false
+          console.log(error); // Log the error to console
+          alert("something went wrong!"); // Show error message
         }
       );
   };
