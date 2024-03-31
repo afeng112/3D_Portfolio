@@ -15,16 +15,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
   mounties,
   next_one,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  cyber_security,
 } from "../assets";
 
 export const navLinks = [
@@ -57,7 +54,7 @@ const services = [
   },
   {
     title: "Cyber Security Specialist",
-    icon: backend,
+    icon: cyber_security,
   },
 ];
 
@@ -170,16 +167,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "My website!",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Website that combines the power of React for dynamic user interfaces with Three.js for stunning 3D visualizations, offering visitors an engaging and visually captivating experience of my capabilities!",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "three.js",
         color: "green-text-gradient",
       },
       {

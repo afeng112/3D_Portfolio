@@ -22,6 +22,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import mounties from "./company/mounties.png";
 import next_one from "./company/next_one.png";
+import cyber_security from "./tech/cyber_security.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -63,4 +64,5 @@ export {
   tripguide,
   mounties,
   next_one,
+  cyber_security,
 };
