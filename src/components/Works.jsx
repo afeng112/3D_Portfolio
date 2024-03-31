@@ -28,7 +28,7 @@ const ProjectCard = ({
         }}
         // Custom styling for the project card
         className="bg-tertiary p-5 rounded-2xl
-         sm:w-[360px] w-full"
+         sm:w-[360px] w-full w-full frost-gradient"
       >
         {/* Container for the project image */}
         <div className="relative w-full h-[230px]">
