@@ -188,9 +188,9 @@ const projects = [
     source_code_link: "https://github.com/afeng112/Website-Portfolio",
   },
   {
-    name: "Job IT",
+    name: "NBA Stat App (WIP | The Stat-line)",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Stat-line is your go-to app for all things NBA statistics. Built with React.js, this sleek and intuitive application provides comprehensive statistical analysis of your favorite NBA players, teams, and games. Whether you're a die-hard basketball fan or a casual enthusiast, Stat-line has something for everyone.",
     tags: [
       {
         name: "react",
@@ -205,20 +205,20 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: "",
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Weather Dashboard",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive weather outlook platform that displays current weather conditions, forecasts, and weather alerts for a given location.",
     tags: [
       {
-        name: "nextjs",
+        name: "API",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Weatherstack",
         color: "green-text-gradient",
       },
       {
@@ -226,7 +226,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: "",
     source_code_link: "https://github.com/",
   },
 ];
