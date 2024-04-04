@@ -1,12 +1,16 @@
 import React from "react";
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Gltf, OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+// Functional component for rendering the 3D model of computers
 const Computers = ({ isMobile }) => {
+  // Loading 3D model using useGLTF hook
   const computer = useGLTF("./desktop_pc/scene.gltf");
+
+  // Rendering the 3D model with light properties and object properties
   return (
     <mesh>
       {/* Light properties of object */}
@@ -31,9 +35,13 @@ const Computers = ({ isMobile }) => {
   );
 };
 
+// Functional component for rendering the canvas containing 3D models of computers
+
 const ComputersCanvas = () => {
+  // useState variable to track if the device is mobile or not
   const [isMobile, setIsMobile] = useState(false);
 
+  // Effect hook to set initial value of isMobile state variable and add listener for screen size changes
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -41,7 +49,7 @@ const ComputersCanvas = () => {
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
+    // Callback to handle changes to the media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
@@ -56,23 +64,29 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
+    // Rendering the Canvas with looping frames, shadows and camera positioning
     <Canvas
       frameLoop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
+      {/* Suspense component for handling loading states and fallback */}
       <Suspense fallback={<CanvasLoader />}>
+        {/* OrbitControls component for user interaction with the scene */}
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
+        {/* Rendering Computers component to display 3D models */}
         <Computers isMobile={isMobile} />
       </Suspense>
+      {/* Preload component to preload all assets */}
       <Preload all />
     </Canvas>
   );
 };
 
+// Exporting the ComputersCanvas component as default
 export default ComputersCanvas;
