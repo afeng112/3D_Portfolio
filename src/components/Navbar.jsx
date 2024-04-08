@@ -48,10 +48,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {/* If it's a small device, use a dropdown box */}
         {/* Rendering dropdown menu for small devices */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          {/* Replace the Links with a single dropdown image */}
           {/* Toggling the menu icon */}
           <img
             src={toggle ? close : menu}
@@ -65,7 +63,6 @@ const Navbar = () => {
           black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10
           rounded-xl`}
           >
-            {/* Once toggled, create a dropdown menu with the links. */}
             {/* Rendering dropdown links */}
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
