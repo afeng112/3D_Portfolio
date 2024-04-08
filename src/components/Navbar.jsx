@@ -5,8 +5,10 @@ import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState(""); // State variable to track the active link
+  const [toggle, setToggle] = useState(false); // State variable to toggle dropdown menu
+
+  // Rendering the navigation bar
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20
@@ -14,12 +16,13 @@ const Navbar = () => {
     >
       {/* Navbar Dimensions */}
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        {/* Logo and site name */}
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
+            setActive(""); // Resetting active state
+            window.scrollTo(0, 0); // Scrolling to the top of the page
           }}
         >
           <img src={logo} alt="logo" className="w-11 h-11 object-contain" />
@@ -31,6 +34,7 @@ const Navbar = () => {
           </p>
         </Link>
         {/* Links : About, Work, Contact*/}
+        {/* Rendering navigation links */}
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
@@ -38,28 +42,31 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[20px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+              onClick={() => setActive(link.title)} // Setting active link on click
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
         {/* If it's a small device, use a dropdown box */}
+        {/* Rendering dropdown menu for small devices */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           {/* Replace the Links with a single dropdown image */}
+          {/* Toggling the menu icon */}
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px]
-          object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          ></img>
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            onClick={() => setToggle(!toggle)} // Toggling the dropdown menu
+          />
+          {/* Dropdown menu */}
           <div
             className={`${!toggle ? "hidden" : "flex"} p-6
           black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10
           rounded-xl`}
           >
             {/* Once toggled, create a dropdown menu with the links. */}
+            {/* Rendering dropdown links */}
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
                 <li
@@ -68,8 +75,8 @@ const Navbar = () => {
                     active === link.title ? "text-white" : "text-secondary"
                   } font-poppins font-medium cursor-pointer text-[18px]`}
                   onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
+                    setToggle(!toggle); // Toggling the dropdown menu
+                    setActive(link.title); // Setting active link
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
@@ -83,4 +90,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; // Exporting Navbar component as default
